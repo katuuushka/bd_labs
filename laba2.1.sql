@@ -1,2 +1,3 @@
-/* собрать всю информацию о зарегестрированных в базе объектах. */
-select * from facilities;
+/* выбрать бесплатные объекты  */
+use cd;
+select * from facilities where guestcost = 0;
