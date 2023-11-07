@@ -1,5 +1,5 @@
 /*  список общего количества мест, забронированных на 
-один объект в месяц в 2012 году */
+один объект в месяц в 2012 году*/
 USE cd;
 SELECT bookings.facid,
 MONTH(bookings.starttime) AS month,
