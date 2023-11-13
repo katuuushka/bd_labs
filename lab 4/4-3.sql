@@ -1,5 +1,5 @@
-/*Добавьте еще одно spa с такими же характеристиками как в задании 1, сгенерировав новое ID.*/
+/* Добавьте еще одно spa с такими же характеристиками как в задании 1 */
 USE cd;
 INSERT INTO facilities (facid, facility, membercost, guestcost, initialoutlay,monthlymaintenance )
-SELECT max(facid)+1 ,'spa', 20, 30 , 100000, 800 FROM facilities;
+SELECT 12, facility, membercost, guestcost, initialoutlay,monthlymaintenance  FROM facilities WHERE facid = 9;
 SELECT * FROM facilities;
