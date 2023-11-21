@@ -3,4 +3,4 @@ USE cd;
 SELECT DISTINCT surname, firstname FROM members
 JOIN bookings ON members.memid = bookings.memid
 JOIN facilities ON facilities.facid = bookings.facid
-WHERE facilities.facility LIKE '%Tennis court%';
+WHERE facilities.facility LIKE '%court 1%' OR '%court 2%';
