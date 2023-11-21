@@ -1,11 +1,5 @@
 /* количество рекомендаций для каждого члена клуба, данных этим членом клуба, искючив членов, которые не давали 
 рекомендаций. */
 USE cd;
-SELECT
-    mem.memid AS MemberID,
-    mem.firstname AS firstname,
-    mem.surname AS lastname,
-    COUNT(mem2.memid) AS rec_count
-FROM members mem
-JOIN members mem2 ON mem.memid = mem2.recommendedby
-GROUP BY mem.memid, mem.firstname, mem.surname;
+SELECT CONCAT(m1.surname, ' ', m1.firstname) AS 'ФИО', COUNT(m2.memid) AS 'Количество рекомендаций' FROM members m1
+JOIN members AS m2 ON m2.recommendedby = m1.memid GROUP BY m1.memid;
