@@ -1,8 +1,6 @@
-/* Функция расчета окупаемости каждого объекта на основании оплаты аренд за месяц*/
+/* Функция расчета окупаемости каждого объекта на основании оплаты аренд за месяц и применение её к июлю 2012 года*/
 USE cd;
-
 DELIMITER $$
-
 DROP PROCEDURE IF EXISTS getPayback $$
 CREATE PROCEDURE getPayback(whichDate DATE)
     READS SQL DATA
@@ -19,7 +17,5 @@ BEGIN
     GROUP BY b.facid
     ORDER BY b.facid;
 END $$
-
 DELIMITER ;
-
 CALL getPayback('2012-07-03');
